@@ -12,13 +12,13 @@ from proj_ss.utilities import read_yaml
     {
         "scripts": ["clean_data.py"],
         "data_info": SRC / "data_management" / "data_info.yaml",
-        "data": SRC / "data" / "data.csv",
+        "data": SRC / "data"/ "dataset.csv"
     },
 )
-@pytask.mark.produces(BLD / "python" / "data" / "data_clean.csv")
-def task_clean_data_python(depends_on, produces):
+@pytask.mark.produces(BLD / "python" / "data"/"cleaned_data.csv")
+def task_clean_data_python(depends_on,produces):
     """Clean the data (Python version)."""
-    data_info = read_yaml(depends_on["data_info"])
+    #data_info = read_yaml(depends_on["data_info"])
     data = pd.read_csv(depends_on["data"])
-    data = clean_data(data, data_info)
-    data.to_csv(produces, index=False)
+    data = clean_data(data)
+    data.to_csv(produces)
