@@ -10,7 +10,8 @@ from proj_ss.utilities import read_yaml
 
 figure_dir = BLD / "python" / "age_efficiency" / "figure"
 os.makedirs(figure_dir, exist_ok=True)             
-##this is needed, otherwise, the folder is not created by "produces" 
+##This is needed, otherwise, the folder is not created by "produces"
+ 
 @pytask.mark.depends_on(
     {
         "scripts": ["predict.py"],

@@ -9,6 +9,7 @@ import os
 
 results_dir = BLD / "python"/ "results"
 os.makedirs(results_dir, exist_ok=True)
+##This is needed, otherwise, the folder "results" is not created by "produces"
 
 @pytask.mark.depends_on(
     {
