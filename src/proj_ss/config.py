@@ -5,7 +5,7 @@ SRC = Path(__file__).parent.resolve()
 BLD = SRC.joinpath("..", "..", "bld").resolve()
 
 TEST_DIR = SRC.joinpath("..", "..", "tests").resolve()
-PAPER_DIR = SRC.joinpath("..", "..", "paper").resolve()
+PAPER_DIR = SRC.joinpath("..","..", "paper").resolve()
 
 GROUPS = ["marital_status", "qualification"]
 
