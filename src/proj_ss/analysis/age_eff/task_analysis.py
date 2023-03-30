@@ -5,9 +5,9 @@ import pytask
 import matplotlib.pyplot as plt
 import os
 
-from proj_ss.analysis.predict import predict_eff
-from proj_ss.analysis.predict import predict_eff_age
-from proj_ss.config import BLD, SRC
+from proj_ss.analysis.age_eff.predict import predict_eff
+from proj_ss.analysis.age_eff.predict import predict_eff_age
+from proj_ss.config import BLD
 from proj_ss.utilities import read_yaml
 
 

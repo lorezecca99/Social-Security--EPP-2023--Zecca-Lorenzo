@@ -1,14 +1,18 @@
 import numpy as np
 import pytask
 
-from proj_ss.analysis.steady_states import SS
+from proj_ss.analysis.steady_states.code_SS import SS
 
 from proj_ss.config import BLD
 from proj_ss.utilities import read_yaml
+import os
+
+results_dir = BLD / "python"/ "results"
+os.makedirs(results_dir, exist_ok=True)
 
 @pytask.mark.depends_on(
     {
-        "scripts": ["steady_states.py"],
+        "scripts": ["code_SS.py"],
         "data": BLD / "python" /"age_efficiency"/ "eff_profiles_py.txt",
     },
 )
@@ -28,7 +32,7 @@ def task_SS_python(depends_on, produces):
 
     ss_results = SS(data,iterations)
     """Saving all the scalar as .txt and vectors as .npy"""
-    np.save(BLD / "python" / "results"/"kgen0.npy", ss_results[0])
+    np.save(BLD / "python" / "results"/"kgen0.npy",ss_results[0])
     np.save(BLD / "python" / "results"/"kgen1.npy", ss_results[1])
     np.save(BLD / "python" / "results"/"labgen0.npy", ss_results[2])
     np.save(BLD / "python" / "results"/"labgen1.npy", ss_results[3])
