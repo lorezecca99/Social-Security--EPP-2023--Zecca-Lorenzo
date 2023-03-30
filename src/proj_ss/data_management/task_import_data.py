@@ -9,6 +9,7 @@ from proj_ss.data_management.import_data import import_dataset
 #data_dir = SRC / "data"
 #os.makedirs(data_dir, exist_ok=True)
 
+@pytask.mark.try_first
 @pytask.mark.produces(SRC / "data"/"dataset.csv")
 def task_import_dataset(produces):
     """Clean the data (Python version).

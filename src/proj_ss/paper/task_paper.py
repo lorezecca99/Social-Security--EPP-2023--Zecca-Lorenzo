@@ -13,6 +13,7 @@ documents = ["proj_ss"]
 
 for document in documents:
 
+    @pytask.mark.try_last
     @pytask.mark.depends_on({
         "document": PAPER_DIR / f"{document}.pdf"
     })
@@ -24,7 +25,8 @@ for document in documents:
         return produces / f"{document}.pdf"
 
     print("Social_security_LZ.pdf copied to BLD/latex")
-
+    
+@pytask.mark.try_last
 @pytask.mark.depends_on({
         "table": PAPER_DIR / "table_results.tex"
     })
