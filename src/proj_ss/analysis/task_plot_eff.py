@@ -9,14 +9,12 @@ from proj_ss.utilities import read_yaml
 
 
 figure_dir = BLD / "python" / "age_efficiency" / "figure"
-
-if not os.path.exists(figure_dir):
-    os.mkdir(figure_dir)             ##this is needed, otherwise, the folder is not created by "produces" 
+os.makedirs(figure_dir, exist_ok=True)             
+##this is needed, otherwise, the folder is not created by "produces" 
 @pytask.mark.depends_on(
     {
         "scripts": ["predict.py"],
         "data": BLD / "python" / "age_efficiency" / "age_eff.csv",
-        "data_info": SRC / "data_management" / "data_info.yaml",
     },
 )
 @pytask.mark.produces(

@@ -16,7 +16,6 @@ from proj_ss.utilities import read_yaml
     {
         "scripts": ["predict.py"],
         "data": BLD / "python" / "data" / "cleaned_data.csv",
-        "data_info": SRC / "data_management" / "data_info.yaml",
     },
 )
 @pytask.mark.produces(BLD / "python" / "age_efficiency"/"age_eff.csv")
@@ -32,7 +31,6 @@ def task_age_eff_csv_python(depends_on, produces):
     {
         "scripts": ["predict.py"],
         "data": BLD / "python" / "data" / "cleaned_data.csv",
-        "data_info": SRC / "data_management" / "data_info.yaml",
     },
 )
 @pytask.mark.produces(BLD / "python" / "age_efficiency"/"eff_profiles_py.txt")
