@@ -13,6 +13,17 @@ documents = ["proj_ss"]
 
 for document in documents:
 
+    @pytask.mark.latex(
+        script=PAPER_DIR / f"{document}.tex",
+        document=BLD / "latex" / f"{document}.pdf",
+        compilation_steps=cs.latexmk(
+            options=("--pdf", "--interaction=nonstopmode", "--synctex=1", "--cd"),
+        ),
+    )
+    @pytask.mark.task(id=document)
+    def task_compile_document():
+        """Compile the document specified in the latex decorator."""
+
     @pytask.mark.try_last
     @pytask.mark.depends_on({
         "document": PAPER_DIR / f"{document}.pdf"
