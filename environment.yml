@@ -26,6 +26,7 @@ dependencies:
   - statsmodels
   - toml
   - matplotlib
+  - scikit-learn
   - pip:
       - -e .
       - kaleido
