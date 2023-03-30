@@ -1,0 +1,72 @@
+
+
+\date{
+    31st March 2023
+}
+
+\maketitle
+
+
+\begin{abstract}
+    This project replicates the study of Conesa and Krueger (1999): we consider a discrete time overlapping generations model, 
+    where the economy is populated by a continuum with given mass 
+    growing at a constant rate $n$ of ex-ante identical individuals.
+    We compare two steady states: 
+    one in which the government runs a social security system, financed 
+    through taxes on labor; and another one, where the there is no public 
+    pension system, and eranings from labor are not taxed. However, we will cover only 
+    the comparion between the two steady states, neglecting the transition dynamics analysis.
+\end{abstract}
+
+\clearpage
+
+
+\section{Numerical results} % (fold)
+The figures below show life-cycle profiles of labor supply, assets, consumption, and earnings in the two steady states of
+our model. However, the images are obtained setting only 2 iterations. A proper analisys would indeed need around 30 to get reasonable results.
+This project uses only 2 to speed up the code and show that the project itself is running.
+
+\begin{table}[!htb]
+\input{table_results.tex}
+\end{table}
+\section{Aggregate variables' profile: Initial vs. Final Steady State}
+
+\begin{figure}
+
+    \centering
+    \includegraphics[width=0.85\textwidth]{../bld/python/figures/steady_states/savings_by_age.png}
+    \caption{\emph{Python:} Savings by age. Larger in the final ss: without social security, agents have to accumulate more wealth.}
+    \label{fig:python-K}
+\end{figure}
+
+\begin{figure}
+    
+    \centering
+    \includegraphics[width=0.85\textwidth]{../bld/python/figures/steady_states/labor_by_age.png}
+    \caption{\emph{Python:} Effective labor supply by age.}
+    \label{fig:python-L}
+
+\end{figure}
+
+\begin{figure}
+
+    \centering
+    \includegraphics[width=0.85\textwidth]{../bld/python/figures/steady_states/earnings_by_age.png}
+    \caption{\emph{Python:} Earnings by age. Larger in the final ss: agents work more and at higher wages.}
+    \label{fig:python-E}
+
+\end{figure}
+
+
+\begin{figure}
+
+    \centering
+    \includegraphics[width=0.85\textwidth]{../bld/python/figures/steady_states/consumption_by_age.png}
+    \caption{\emph{Python:} Consumption by age.}
+    \label{fig:python-C}
+
+\end{figure}
+
+\printbibliography
+
+\end{document}
