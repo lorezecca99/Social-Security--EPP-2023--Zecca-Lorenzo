@@ -2,11 +2,14 @@
 
 import pandas as pd
 import pytask
+import os 
 
 from proj_ss.config import BLD, SRC
 from proj_ss.data_management import clean_data
 from proj_ss.utilities import read_yaml
 
+data_dir = BLD / "python"/ "data"
+os.makedirs(data_dir, exist_ok=True)
 
 @pytask.mark.depends_on(
     {
