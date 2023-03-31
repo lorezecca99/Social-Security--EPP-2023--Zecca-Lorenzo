@@ -32,10 +32,10 @@ for document in documents:
     def task_copy_to_root(depends_on, produces):
         """Copy a document to the root directory for easier retrieval."""
         pdf_file = depends_on["document"]
-        shutil.copyfile(pdf_file, produces / "Social_security_LZ.pdf")
+        shutil.copyfile(pdf_file, produces /f"{document}.pdf")
         return produces / f"{document}.pdf"
 
-    print("Social_security_LZ.pdf copied to BLD/latex")
+    print("proj_ss.pdf copied to BLD/latex")
     
 @pytask.mark.try_last
 @pytask.mark.depends_on({
