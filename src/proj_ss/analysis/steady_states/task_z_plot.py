@@ -14,7 +14,7 @@ import os
 figures_dir = BLD / "python"/ "figures"/"steady_states"
 os.makedirs(figures_dir, exist_ok=True)
 
-@pytask.mark.try_last
+
 @pytask.mark.depends_on(
     {
         "data_k0": BLD / "python" /"results"/ "kgen0.npy",

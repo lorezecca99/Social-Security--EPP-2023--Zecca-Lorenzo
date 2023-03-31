@@ -13,6 +13,7 @@ documents = ["proj_ss"]
 
 for document in documents:
 
+    @pytask.mark.try_last
     @pytask.mark.latex(
         script=PAPER_DIR / f"{document}.tex",
         document=BLD / "latex" / f"{document}.pdf",
