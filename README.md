@@ -9,7 +9,7 @@
 To get started, create and activate the environment with
 
 ```console
-$ conda/mamba env create -f environment.yml
+$ conda/mamba env create
 $ conda activate proj_ss
 ```
 
