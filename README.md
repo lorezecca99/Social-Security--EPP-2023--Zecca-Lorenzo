@@ -37,7 +37,7 @@ through taxes on labor; and another one, where the there is no public
 pension system, and eranings from labor are not taxed. However, we will cover only 
 the comparion between the two steady states, neglecting the transition dynamics analysis.\
 
-The organization of the projetc is the follow.\
+The organization of the project is the follow.\
 In the folder "data_management", we have two functions: "import_data.py", to import the dataset from Dropbox (importing directly the dataset in the folder would not be possible given its dimension and the limitation of Github's basic version), and "clean_data.py" to prepare the dataset for the estimation/prediction phase. Then the two "task" files use the dependencies indicated and produce the initial and cleaned dataset (saved in "bld/python/data").\
 Then, the analisys forlder containts the functions, and respective tasks, to predict the age-efficiency profile of workers between 20 and 64 years of age, plot such a profile (saved in "bld/python/age_efficiency"), and run the code to compute and save the results (saved in "bld/python/results") for the two steady states. Finally, the file "task_plot.py" plots the profile for savings, labor supply, earnings, and consumption by age in both economies, with and without social security.\
 In addition, the folder "paper" containts the latex file to import the table and the figures, and to produce the final pdf.\
