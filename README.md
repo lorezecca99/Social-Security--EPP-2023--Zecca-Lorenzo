@@ -43,3 +43,7 @@ Then, the analisys forlder containts the functions, and respective tasks, to pre
 In addition, the folder "paper" containts the latex file to import the table and the figures, and to produce the final pdf.
 
 Once having cloned the repository and set the environment ("proj_ss"), you may need to first run "pytask" negleting the files "task_plot.py" and "task_paper.py". The first does not run without first saving the results, so to avoid error in dependencies we can just ignore it. Also, ignoring the task for the paper may be necessary since it requires to compile the pdf in which the outputs of "task_plot.py" are used as inputs. Only then, you will be able to run pytask without any issue.
+
+The first run may take around 5/10 minutes since it needs to download a large dataset from Dropbox and run the iterations for both steady states. After that, it runs much faster.
+
+
